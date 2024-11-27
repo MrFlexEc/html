@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MI PAGINA WEB</h1>
+
+    <p>¿Quieres contratar un miembro específico de nuestro personal? Encuentra los detalles en nuestra <a href="contacts.html">página de contactos</a></p>
+
+    <p>Visita mi <a href="projects/index.html   ">página de inicio del proyecto</a></p>
+
+    <p>Mi hoja de vida <a href="pdfs/HOJA DE VIDA.pdf">aquí</a></p>
+
+    <!--PARA APUNTAR A UN ELEMENTO ESPECIFICO DENTRO DE OTRO SITIO WEB, ESTA ES LA SINTAXTIS DE HREF-->
+    <p>¿Quieres una carta? Aquí tienes nuestra <a href="contacts.html#direccion_de_envio">dirección de envío</a></p>
+
+    <!--URL ABSOLUTA Y RELATIVA-->
+
+    <!--
+    ABSOLUTA
+    
+    URL absoluta: Hace referencia a una dirección definida por su ubicación absoluta en la web, 
+    esta incluye el protocolo y el nombre del dominio. Por ejemplo, si subes una página de inicio index.html a
+    un directorio llamado projects que se encuentra dentro de la raíz de un servidor web, y el dominio del sitio 
+    web es http://www.example.com, se podrá acceder a la página desde http://www.example.com/projects/index.html 
+    (o simplemente http://www.example.com/projects/, ya que la mayoría de los servidores web buscan la página de 
+    inicio index.html para cargarla por omisión si no se les especifica otra en la URL).
+    Una URL absoluta siempre apuntará a la misma dirección, sin importar desde dónde se utilice.
+
+    RELATIVA
+    Hace referencia a una dirección que depende de la posición del archivo desde donde se utiliza — 
+    son las que vimos en la sección anterior. Por ejemplo, si desde un archivo ubicado en 
+    http://www.example.com/projects/index.html queremos enlazar hacia un archivo PDF ubicado en el mismo 
+    directorio, la URL sería simplemente el nombre del archivo (por ejemplo: project-brief.pdf) no 
+    necesitamos más información. Si el archivo PDF está situado en un subdirectorio dentro de projects 
+    llamado pdfs, la URL relativa es: pdfs/project-brief.pdf (la URL absoluta equivalente sería: 
+    http://www.example.com/projects/pdfs/project-brief.pdf).
+    -->
+    
+    <!--BUENAS PRACTICAS PARA ENLACES-->
+    <h3>BUENA PRACTICA</h3>
+    <a href="">Descarga firefox</a>
+    <h3>MALA PRACTICA</h3>
+    <p></p><a href="">Haz click aquí</a> para descargar Firefox</p>
+    <h3>OTRAS INDICACIONES</h3>
+    <ul>
+        <li>No repetir la URL como parte del texto — Las URLs suenan horrible, y todavía suenan peor si las lee un lector de pantalla, letra por letra.</li>
+        <li>No escribir «link» o «link a» o «enlace» o «enlace a» en el texto del enlace porque es redundante. Los lectores automáticos indican que hay un enlace al encontrarlo. Los usuarios también saben que hay un enlace, porque normalmente se suele cambiar el color del texto y se subraya (no hay que romper esta convención, porque los usuarios están acostumbrados a ella).</li>
+        <li>Redacta la etiqueta del enlace de la manera más breve y concisa posible — los textos de enlace largos son especialmente molestos para los usuarios que utilizan lectores automáticos, porque tienen que escuchar todo el texto del enlace.</li>
+        <li>Minimiza los casos en los que varias copias del mismo texto están vinculadas a diferentes lugares. Esto puede causar problemas a los usuarios de lectores de pantalla, si hay una lista de enlaces fuera de contexto que están etiquetados como "haz clic aquí", "haz clic aquí", "haz clic aquí".</li>
+        <li>Utiliza enlaces relativos siempre que sea posible, mientras estés dentro del mismo sitio web que desarrollas.</li>
+        <li>INDICA CLARAMENTE LOS ELEMENTOS NO HTML, COMO DOCUMENTOS, PDFS, ETC. O REPRODUCIR VIDEOS O AUDIOS</li>
+    </ul>
+    <p>Lo de las URL relativas se utiliza para:</p>
+    <ol>
+        <li>Codigo más facil de leer</li>
+        <li>Es mas eficiente que usar una URL absoluta, dado que fuerzas al navegador a buscar la ubicación real 
+            en el DNS
+        </li>
+    </ol>
+
+    <h2>ATRIBUTO DOWNLOAD DE LOS ENLACES</h2>
+    <p>Si queremos hacer referencia a una descarga en lugar de a algo que abra el navegador, disponemos del 
+        atributo download para proporcionar un nombre predeterminado al archivo a guardar. 
+        Veamos un ejemplo con un enlace a la descarga de la versión para Windows de Firefox:</p>
+    <a  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
+        download="firefox-latest-64bit-installer.exe">
+        Descarga la última versión de Firefox para Windows (64 bits) (Español, es-MX)
+    </a>
+
+</body>
+</html>
